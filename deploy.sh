@@ -4,8 +4,8 @@ echo "=====> copy config file..."
 mkdir -p /usr/local/etcd/bin
 mkdir -p /usr/local/etcd/conf
 mkdir -p /var/lib/etcd/
-chown -R daemon:daemon /usr/local/etcd/
-chown -R daemon:daemon /var/lib/etcd/
+chown -R root:root /usr/local/etcd/
+chown -R root:root /var/lib/etcd/
 
 cp etcd.conf /usr/local/etcd/conf
 cp etcd-v3.4.3-linux-amd64/etcd /usr/local/etcd/bin
