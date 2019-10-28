@@ -6,6 +6,8 @@ Wants=network-online.target
 
 [Service]
 Type=notify
+User=daemon
+Group=daemon
 EnvironmentFile=/usr/local/etcd/conf/etcd.conf
 ExecStart=/usr/local/etcd/bin/etcd \
 --name=\${ETCD_NAME} \
