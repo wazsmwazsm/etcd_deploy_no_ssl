@@ -7,18 +7,8 @@ Wants=network-online.target
 User=root
 Type=notify
 WorkingDirectory=/var/lib/etcd/
-EnvironmentFile=/usr/local/etcd/conf/etcd.conf
-ExecStart=/usr/local/etcd/bin/etcd \
-    --name=${ETCD_NAME} \
-    --data-dir=${ETCD_DATA_DIR} \
-    --listen-client-urls=${ETCD_LISTEN_CLIENT_URLS} \
-    --listen-peer-urls=${ETCD_LISTEN_PEER_URLS} \
-    --advertise-client-urls=${ETCD_ADVERTISE_CLIENT_URLS} \
-    --initial-cluster-token=${ETCD_INITIAL_CLUSTER_TOKEN} \
-    --initial-advertise-peer-urls=${ETCD_INITIAL_ADVERTISE_PEER_URLS} \
-    --initial-cluster-state=${ETCD_INITIAL_CLUSTER_STATE} \
-    --initial-cluster=${ETCD_INITIAL_CLUSTER}
-    
+EnvironmentFile=-/usr/local/etcd/conf/etcd.conf
+ExecStart=/usr/local/etcd/bin/etcd
 Restart=on-failure
 LimitNOFILE=65536
 
