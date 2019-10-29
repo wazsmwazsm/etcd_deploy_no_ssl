@@ -1,5 +1,5 @@
 # etcd_deploy_no_ssl
-etcd3.4 deploy tool (no ssl)
+etcd3.4 deploy tool (no ssl) for linux
 
 ## step1
 
