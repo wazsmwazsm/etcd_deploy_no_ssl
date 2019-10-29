@@ -6,5 +6,7 @@ if [ ! -f "./etcd-v3.4.3-linux-amd64.tar.gz" ];then
         -O etcd-v3.4.3-linux-amd64.tar.gz  
 fi
 
+tar -xzf etcd-v3.4.3-linux-amd64.tar.gz
+
 echo "=====> etcd downloaded"
 
